@@ -1,0 +1,35 @@
+﻿@model MvcWebUI.Models.CityListViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form action="Login" method="post">
+        <div>
+            <input type="submit" value="Click to Login" />
+        </div>
+        <table>
+            <tr>
+                <td>Şehir Id</td>
+                <td>Şehir Adı</td>
+                <td>Plaka</td>
+            </tr>
+            @foreach (var item in Model.CityList)
+            {
+                <tr>
+                    <td>@item.ID_IL</td>
+                    <td>@item.DS_IL</td>
+                    <td>@item.DS_PLAKA</td>
+                </tr>
+            }
+        </table>
+    </form>
+</body>
+</html>
